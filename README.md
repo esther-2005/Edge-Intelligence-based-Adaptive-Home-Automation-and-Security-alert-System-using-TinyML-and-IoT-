@@ -105,3 +105,6 @@ When a hazardous condition is detected, the system automatically activates the r
                  │    Blynk IoT     │
                  │ Mobile Dashboard │
                  └─────────────────┘
+## 📸 Project Demonstration
+
+![Project Demonstration](project-demo.png)
