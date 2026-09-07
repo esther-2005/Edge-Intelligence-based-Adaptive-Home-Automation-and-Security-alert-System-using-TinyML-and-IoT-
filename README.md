@@ -1,131 +1,107 @@
-# Edge-Intelligence-based-Adaptive-Home-Automation-and-Security-alert-System-using-TinyML-and-IoT-
-An intelligent home automation and security system that combines ESP32, TinyML, IoT, and sensor-based automation to detect gas leakage and fire conditions and automatically trigger safety actions.
+# 🏠 Edge Intelligence-Based Adaptive Home Automation and Security Alert System using TinyML & IoT
 
-📌Project Overview
-The system continuously monitors the home environment using multiple sensors. Gas-related sensor data is processed using a TinyML classification model deployed on the ESP32, enabling local and low-latency decision-making.
-When a hazardous condition is detected, the system automatically activates safety mechanisms such as an exhaust fan, servo-controlled window, buzzer, and remote IoT alerts.
-The user can monitor the system remotely through a Blynk mobile dashboard.
+> An intelligent IoT-based home automation and security system that combines **Embedded Systems, TinyML, Edge AI, and IoT** to detect hazardous gas and flame conditions and automatically initiate safety responses.
 
-🎯Objectives
-Detect hazardous gas conditions using TinyML
-Detect flame/fire using a flame sensor
-Monitor temperature and humidity
-Automatically activate safety mechanisms
-Provide real-time remote monitoring through IoT
-Perform intelligent decision-making at the edge
-Reduce response latency by processing data locally
+---
 
-⚙️Hardware Components
-Component
-Purpose
-ESP32
-Main controller and edge-processing unit
-MQ-2 Gas Sensor
-Gas/smoke sensing
-DHT11
-Temperature and humidity monitoring
-Flame Sensor
-Fire/flame detection
-Servo Motor
-Automatic window mechanism
-Relay Module
-Controls exhaust fan
-Exhaust Fan
-Removes contaminated air
-Buzzer
-Audible safety alert
-LEDs
-Visual indication
-Breadboard & Jumper Wires
-Circuit prototyping
+## 📌 Project Overview
 
-💻 Software & Technologies
-Embedded C/C++
-ESP32
-Arduino IDE
-TinyML
-Edge Impulse
-TensorFlow Lite
-Blynk IoT
-Wi-Fi
-Sensor interfacing
+The **Edge Intelligence-Based Adaptive Home Automation and Security Alert System** is an intelligent safety and automation solution developed using an **ESP32 microcontroller, TinyML, IoT, and multiple sensors**.
 
-🤖 TinyML Implementation
-The gas detection component uses a machine-learning classification model trained using Edge Impulse.
-The trained model is converted into a quantized TensorFlow Lite model and deployed directly on the ESP32.
-Why TinyML?
-Instead of sending all sensor data to a cloud server for processing, the ESP32 can perform the classification locally.
-This provides:
-⚡ Faster decision-making
-📉 Lower latency
-🔒 Local data processing
-🌐 Reduced dependence on cloud processing
-🔋 Efficient edge operation
+The system continuously monitors the home environment for **gas leakage, smoke, flame, temperature, and humidity**.
 
-⚙️ Working Principle
-1. Normal Condition
-The sensors continuously monitor the environment.
-Sensors → ESP32 → Monitoring
-No hazardous condition is detected, so the safety mechanisms remain inactive.
-2. Gas Detection
-When the TinyML model identifies a hazardous gas condition:
-MQ-2
-  ↓
-ESP32
-  ↓
-TinyML Classification
-  ↓
-Gas Detected
-  ↓
-Relay → Exhaust Fan ON
-  ↓
-Servo → Window Opens
-  ↓
-Blynk → Status Updated
-3. Flame Detection
-When the flame sensor detects fire:
-Flame Sensor
-      ↓
-    ESP32
-      ↓
-Flame Detected
-      ↓
-Buzzer / Alert
-      ↓
-Blynk Dashboard
+A **TinyML classification model trained using Edge Impulse** is deployed directly on the ESP32 using a **quantized TensorFlow Lite model**. This enables the system to perform gas-related classification locally at the edge.
 
-IoT Monitoring
-The system is integrated with Blynk IoT for remote monitoring.
-The dashboard displays:
-🌫️ Gas status
-🔥 Flame status
-🌡️ Temperature
-💧 Humidity
-🔔 Safety alerts
-📸 Project Demonstration
-🔌 Connection & Setup
+When a hazardous condition is detected, the system automatically responds by activating appropriate safety mechanisms such as an **exhaust fan, servo-controlled window, buzzer, and visual indicators**.
 
-📊 Key Features
-✅ TinyML-based gas classification
-✅ Flame detection
-✅ ESP32 edge processing
-✅ Automated exhaust fan control
-✅ Servo-based window automation
-✅ Real-time IoT monitoring
-✅ Blynk mobile dashboard
-✅ Temperature & humidity monitoring
-✅ Audible and visual alerts
-✅ Low-latency decision making
+The system is also connected to a **Blynk IoT mobile dashboard**, allowing the user to monitor environmental parameters and security conditions remotely.
 
-🌱 Future Scope
-Integration of additional environmental sensors
-Advanced anomaly detection using TinyML
-Camera-based fire detection
-Improved mobile notifications
-PCB-based compact hardware implementation
-Battery/solar-powered operation
-Integration with smart-home platforms
+---
 
-👩‍💻 My Contribution
-I worked on the ESP32-based embedded implementation, sensor interfacing, TinyML integration, IoT monitoring, and hardware-software integration of the system.
-This project strengthened my practical knowledge of Embedded Systems, IoT, Edge AI, TinyML, and intelligent automation.
+## 🎯 Objectives
+
+The main objectives of this project are:
+
+- To develop an intelligent home security and automation system using ESP32.
+- To detect hazardous gas conditions using TinyML.
+- To detect flame/fire using a flame sensor.
+- To monitor temperature and humidity in real time.
+- To perform AI-based decision-making directly at the edge.
+- To automatically activate safety mechanisms during hazardous conditions.
+- To provide remote monitoring through Blynk IoT.
+- To reduce response latency through local processing.
+- To integrate AI, IoT, sensors, and actuators into a single embedded system.
+
+---
+
+## 💡 Problem Statement
+
+Conventional home safety systems often depend on simple threshold-based detection or cloud processing.
+
+Threshold-based systems may not provide intelligent classification, while cloud-dependent systems can introduce communication delays and require continuous internet connectivity for decision-making.
+
+Therefore, this project proposes an **edge-intelligent home safety system** where sensor data can be processed locally using **TinyML on an ESP32**, while IoT connectivity is used for remote monitoring and notification.
+
+---
+
+## 💭 Proposed Solution
+
+The proposed system combines:
+
+**Embedded Systems + TinyML + IoT + Sensors + Automation**
+
+The ESP32 acts as the central controller.
+
+The MQ-2 sensor monitors gas/smoke conditions, while a flame sensor detects fire. The DHT11 sensor measures temperature and humidity.
+
+The gas-related sensor data is processed using a TinyML classification model deployed on the ESP32.
+
+When a hazardous condition is detected, the system automatically activates the required safety mechanism.
+
+---
+
+# 🧩 System Architecture
+
+```text
+                         ┌─────────────────────┐
+                         │        ESP32        │
+                         │  Main Controller    │
+                         └──────────┬──────────┘
+                                    │
+              ┌─────────────────────┼─────────────────────┐
+              │                     │                     │
+              ▼                     ▼                     ▼
+       ┌─────────────┐       ┌─────────────┐       ┌─────────────┐
+       │ MQ-2 Gas    │       │   Flame     │       │   DHT11     │
+       │   Sensor    │       │   Sensor    │       │   Sensor    │
+       └──────┬──────┘       └──────┬──────┘       └──────┬──────┘
+              │                     │                     │
+              ▼                     ▼                     ▼
+       ┌─────────────┐       ┌─────────────┐       Temperature
+       │   TinyML    │       │    Fire     │       & Humidity
+       │Classification│      │  Detection  │        Monitoring
+       └──────┬──────┘       └──────┬──────┘
+              │                     │
+              └──────────┬──────────┘
+                         │
+                         ▼
+                ┌──────────────────┐
+                │ Safety Decision  │
+                └────────┬─────────┘
+                         │
+             ┌───────────┼───────────┐
+             │           │           │
+             ▼           ▼           ▼
+       ┌──────────┐ ┌──────────┐ ┌──────────┐
+       │  Relay   │ │  Servo   │ │  Buzzer  │
+       │   Fan    │ │  Window  │ │  Alert   │
+       └────┬─────┘ └────┬─────┘ └──────────┘
+            │             │
+            ▼             ▼
+       Exhaust Fan    Window Opens
+                         │
+                         ▼
+                 ┌─────────────────┐
+                 │    Blynk IoT     │
+                 │ Mobile Dashboard │
+                 └─────────────────┘
