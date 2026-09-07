@@ -245,10 +245,5 @@ Embedded Systems & IoT | TinyML | Edge AI | Data Analytics
 - Energy-efficient operation
 - PCB-based implementation
 - Integration with automotive and industrial safety applications
-                         ▼
-                 ┌─────────────────┐
-                 │    Blynk IoT     │
-                 │ Mobile Dashboard │
-                 └─────────────────┘
-
+                 
 
