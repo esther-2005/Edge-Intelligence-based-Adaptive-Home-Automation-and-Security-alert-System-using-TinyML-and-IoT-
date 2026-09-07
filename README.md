@@ -1,0 +1,1 @@
+# Edge-Intelligence-based-Adaptive-Home-Automation-and-Security-alert-System-using-TinyML-and-IoT-
